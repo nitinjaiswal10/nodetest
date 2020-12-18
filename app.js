@@ -38,7 +38,7 @@ app.get('/',(req, res) => {
 /* Add user */
 app.get('/add',(req, res) => {
     res.render('user_add', {
-        title : 'CRUD Operation using NodeJS / ExpressJS / MySQL'
+        title : 'Add User'
     });
 });
 
@@ -59,7 +59,7 @@ app.get('/edit/:userId',(req, res) => {
     let query = connection.query(sql,(err, result) => {
         if(err) throw err;
         res.render('user_edit', {
-            title : 'CRUD Operation using NodeJS / ExpressJS / MySQL',
+            title : 'Edit User',
             user : result[0]
         });
     });
